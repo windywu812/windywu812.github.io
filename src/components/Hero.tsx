@@ -1,3 +1,9 @@
+import pic from "../assets/pic.JPG";
+import linkedinIcon from "../assets/linkedin.png";
+import upworkIcon from "../assets/upwork.png";
+import githubIcon from "../assets/github.png";
+import emailIcon from "../assets/email.png";
+
 export default function Hero() {
   const SocialMediaButton = ({
     href,
@@ -37,22 +43,22 @@ export default function Hero() {
           <div className="flex gap-4 flex-wrap justify-center md:justify-start">
             <SocialMediaButton
               href="https://www.linkedin.com/in/windy-windy/"
-              icon="/src/assets/linkedin.png"
+              icon={linkedinIcon}
               label="LinkedIn"
             />
             <SocialMediaButton
               href="https://www.upwork.com/freelancers/~01355e647cde94a3ce"
-              icon="/src/assets/upwork.png"
+              icon={upworkIcon}
               label="Upwork"
             />
             <SocialMediaButton
               href="https://github.com/windywu812"
-              icon="/src/assets/github.png"
+              icon={githubIcon}
               label="Github"
             />
             <SocialMediaButton
               href="mailto:windywu812@gmail.com"
-              icon="/src/assets/email.png"
+              icon={emailIcon}
               label="Email"
             />
           </div>
@@ -61,7 +67,7 @@ export default function Hero() {
         {/* Right side - Image */}
         <div className="shrink-0 order-first md:order-last">
           <img
-            src="/src/assets/pic.JPG"
+            src={pic}
             alt="Windy"
             className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full border-4 border-purple-500 shadow-lg shadow-purple-500/20 object-cover"
           />
