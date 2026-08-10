@@ -1,94 +1,60 @@
-import { about, testimonials } from "../data/portfolio";
+import { about } from "../data/portfolio";
 
 export default function About() {
   return (
-    <section className="min-h-screen w-full md:w-4/5 mx-auto flex items-center justify-center px-4 md:px-6 py-20">
-      <div className="w-full">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold gradient-purple-pink mb-8 md:mb-12">
-          About Me
-        </h2>
+    <section
+      id="about"
+      className="grid md:grid-cols-[.8fr_1.2fr] gap-10 md:gap-14 px-6 md:px-11 py-16 md:py-18 border-t border-[rgba(242,239,233,.13)]"
+    >
+      <div>
+        <p className="font-mono text-xs tracking-[.18em] uppercase text-[#807C74] mb-6">
+          About
+        </p>
+        <p className="font-['Instrument_Serif'] text-3xl md:text-[44px] leading-[1.1] tracking-[-.01em] m-0">
+          Hi there, I&apos;m a software engineer mainly focused on mobile
+          development, especially native{" "}
+          <span className="italic text-[#FF4D19]">iOS</span> apps.
+        </p>
+      </div>
 
-        <div className="space-y-6 md:space-y-8">
-          {/* Bio */}
-          <div className="glass rounded-xl md:rounded-2xl p-4 md:p-8 glass-hover">
-            <p className="text-sm md:text-base lg:text-lg text-gray-300 leading-relaxed">
-              Hi there 👋, I’m a software engineer mainly focused on mobile
-              development, especially native iOS apps. I’m a curious person who
-              loves solving real-world problems and diving deep into how things
-              work. Since I was a child, I’ve always been fascinated by
-              technology — especially computers. I love exploring how things
-              work, whether it’s on the hardware side like assembling PC
-              components or the software side like writing simple programs. This
-              curiosity eventually led me to pursue a career in software
-              engineering.
-              <br></br>
-              <br></br>I began my journey at university, where I learned the
-              fundamentals of computer science and programming. During my
-              studies, I had the opportunity to join the Apple Developer Academy
-              in Batam, where I learned a lot about iOS development using Swift
-              and SwiftUI. That experience strengthened my passion for building
-              iOS apps, and I decided to focus my career in this field —
-              creating mobile applications that can reach millions of users.
-              <br></br>
-              <br></br>
-              Most recently, I worked at Vidio in Jakarta for about three years.
-              While it was a great experience, I eventually realized that
-              Jakarta wasn’t the right place for me. So, I decided to move back
-              to Batam and continue my journey as a freelance iOS developer. I’m
-              currently open to remote opportunities around the world.
-            </p>
-          </div>
+      <div className="columns-1 md:columns-2 gap-9 text-[15px] leading-[1.8] text-[#ADA9A1]">
+        <p className="mb-4">
+          I&apos;m a curious person who loves solving real-world problems and
+          diving deep into how things work. Since I was a child, I&apos;ve
+          always been fascinated by technology — especially computers. I love
+          exploring how things work, whether it&apos;s on the hardware side
+          like assembling PC components or the software side like writing
+          simple programs. This curiosity eventually led me to pursue a
+          career in software engineering.
+        </p>
+        <p className="mb-4">
+          I began my journey at university, where I learned the fundamentals
+          of computer science and programming. During my studies, I had the
+          opportunity to join the Apple Developer Academy in Batam, where I
+          learned a lot about iOS development using Swift and SwiftUI. That
+          experience strengthened my passion for building iOS apps, and I
+          decided to focus my career in this field — creating mobile
+          applications that can reach millions of users.
+        </p>
+        <p className="mb-4">
+          Most recently, I worked at Vidio in Jakarta for about three years.
+          While it was a great experience, I eventually realized that Jakarta
+          wasn&apos;t the right place for me. So, I decided to move back to
+          Batam and continue my journey as a freelance iOS developer.
+          I&apos;m currently open to remote opportunities around the world.
+        </p>
 
-          {/* Skills */}
-          <div className="glass rounded-xl md:rounded-2xl p-4 md:p-8 glass-hover">
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6">
-              Technical Skills
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-              {Object.entries(about.skills).map(([category, items]) => (
-                <div key={category}>
-                  <h4 className="text-lg font-semibold text-purple-400 mb-3 capitalize">
-                    {category}
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {(items as string[]).map((skill, index) => (
-                      <span
-                        key={index}
-                        className="px-3 py-1 glass rounded-full text-sm text-gray-300 hover:border-purple-500 transition-colors"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
+        <div className="grid grid-cols-2 gap-6 border-t border-[rgba(242,239,233,.13)] pt-6 mt-6">
+          {Object.entries(about.skills).map(([category, items]) => (
+            <div key={category}>
+              <p className="font-mono text-[11px] tracking-[.12em] uppercase text-[#FF4D19] mb-2">
+                {category}
+              </p>
+              <p className="text-[#F2EFE9] m-0">
+                {(items as string[]).join(" · ")}
+              </p>
             </div>
-          </div>
-
-          {/* Testimonials */}
-          <div className="glass rounded-xl md:rounded-2xl p-4 md:p-8 glass-hover">
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-6">
-              What People Say
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="glass rounded-lg md:rounded-xl p-4 md:p-6 hover:border-purple-500 transition-colors"
-                >
-                  <div className="mb-3 md:mb-4">
-                    <p className="font-semibold text-white text-sm md:text-base">
-                      {testimonial.name}
-                    </p>
-                    <p className="text-xs text-gray-400">{testimonial.role}</p>
-                  </div>
-                  <p className="text-xs md:text-sm text-gray-300 italic">
-                    "{testimonial.text}"
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

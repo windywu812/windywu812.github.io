@@ -1,78 +1,97 @@
-import pic from "../assets/pic.JPG";
-import linkedinIcon from "../assets/linkedin.png";
-import upworkIcon from "../assets/upwork.png";
-import githubIcon from "../assets/github.png";
-import emailIcon from "../assets/email.png";
+import pic from "../assets/portrait.png";
 
-export default function Hero() {
-  const SocialMediaButton = ({
-    href,
-    icon,
-    label,
-  }: {
-    href: string;
-    icon: string;
-    label: string;
-  }) => {
-    return (
-      <a href={href} target="_blank" rel="noopener noreferrer">
-        <img
-          src={icon}
-          alt={label}
-          className="w-5 h-5 inline-block mr-2 hover:scale-130 transition-transform"
-        />
-      </a>
-    );
-  };
+const stack = [
+  "SwiftUI",
+  "UIKit",
+  "Kotlin Multiplatform",
+  "React",
+  "Next.js",
+  "TypeScript",
+  "Tailwind CSS",
+  "Laravel",
+];
+
+function Ticker() {
+  const row = (
+    <span className="flex gap-7 pr-7 items-center">
+      {stack.map((s) => (
+        <span key={s} className="flex gap-7 items-center">
+          <span>{s}</span>
+          <span className="text-[#FF4D19]">◆</span>
+        </span>
+      ))}
+    </span>
+  );
 
   return (
-    <section className="min-h-screen w-full md:w-4/5 mx-auto flex items-center justify-center px-4 md:px-6 py-20 md:py-0">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 w-full max-w-6xl">
-        {/* Left side - Text */}
-        <div className="flex-1 text-center md:text-left">
-          <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold mb-4 md:mb-6">
-            <span className="gradient-purple-pink">Windy</span>
+    <div className="border-y border-[rgba(242,239,233,.13)] overflow-hidden py-4">
+      <div className="flex w-max animate-marquee text-2xl md:text-3xl font-extrabold tracking-tight whitespace-nowrap">
+        {row}
+        {row}
+      </div>
+    </div>
+  );
+}
+
+export default function Hero() {
+  return (
+    <section className="font-[Archivo]">
+      <div className="grid md:grid-cols-[1fr_420px] items-end border-t border-[rgba(242,239,233,.13)]">
+        <div className="px-6 md:px-11 pt-14 md:pt-19 pb-12 md:pb-15 min-w-0">
+          <p className="font-mono text-xs tracking-[.18em] uppercase text-[#FF4D19] mb-6 md:mb-9">
+            iOS engineer · 5+ years
+          </p>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-black leading-[1.06] tracking-[-.04em] mb-6 md:mb-8">
+            Scalable,
+            <br />
+            <span className="whitespace-nowrap">high-performance</span>
+            <br />
+            <span className="font-['Instrument_Serif'] italic font-normal tracking-[-.02em] text-[#FF4D19]">
+              iOS
+            </span>{" "}
+            applications.
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-3 md:mb-4">
-            Software Engineer ‍💻
+          <p className="text-lg md:text-xl leading-[1.55] text-[#ADA9A1] max-w-[40ch] mb-6 md:mb-8">
+            SwiftUI &amp; UIKit expert. Freelance iOS developer building for
+            clients worldwide, from Batam, Indonesia.
           </p>
-          <p className="text-base md:text-lg text-gray-400 mb-6 md:mb-8 max-w-2xl mx-auto md:mx-0">
-            Building scalable, high-performance iOS applications • SwiftUI &
-            UIKit Expert • 5+ years experience
-          </p>
-          <div className="flex gap-4 flex-wrap justify-center md:justify-start">
-            <SocialMediaButton
-              href="https://www.linkedin.com/in/windy-windy/"
-              icon={linkedinIcon}
-              label="LinkedIn"
-            />
-            <SocialMediaButton
-              href="https://www.upwork.com/freelancers/~01355e647cde94a3ce"
-              icon={upworkIcon}
-              label="Upwork"
-            />
-            <SocialMediaButton
-              href="https://github.com/windywu812"
-              icon={githubIcon}
-              label="Github"
-            />
-            <SocialMediaButton
+          <div className="flex gap-3 flex-wrap">
+            <a
               href="mailto:windywu812@gmail.com"
-              icon={emailIcon}
-              label="Email"
-            />
+              className="font-mono text-xs tracking-[.08em] uppercase px-7 py-4 bg-[#FF4D19] text-[#08080A] font-bold"
+            >
+              Start a project
+            </a>
+            <a
+              href="https://www.linkedin.com/in/windy-windy/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-mono text-xs tracking-[.08em] uppercase px-7 py-4 border border-[rgba(242,239,233,.3)]"
+            >
+              LinkedIn
+            </a>
           </div>
         </div>
 
-        {/* Right side - Image */}
-        <div className="shrink-0 order-first md:order-last">
+        <div className="relative min-w-0 w-full md:w-[420px] h-[420px] md:h-[660px]">
           <img
             src={pic}
             alt="Windy"
-            className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full border-4 border-purple-500 shadow-lg shadow-purple-500/20 object-cover"
+            className="w-full h-full object-cover block grayscale contrast-[1.08] brightness-95"
+            style={{ objectPosition: "50% 18%" }}
           />
+          <div className="absolute left-4 md:-left-[70px] bottom-11 bg-[#F2EFE9] text-[#08080A] px-[18px] py-[14px] max-w-[240px]">
+            <p className="font-mono text-[11px] tracking-[.1em] uppercase mb-1.5 text-[#6B675F]">
+              Currently
+            </p>
+            <p className="text-[15px] leading-[1.4] font-semibold m-0">
+              Frontend Developer at Slingshot Brand Architect, remote
+            </p>
+          </div>
         </div>
       </div>
+
+      <Ticker />
     </section>
   );
 }
