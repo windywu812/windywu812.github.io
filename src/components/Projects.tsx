@@ -78,10 +78,27 @@ export default function Projects() {
             <p className="text-2xl md:text-[34px] font-black tracking-[-.03em] m-0 mt-5 mb-2.5">
               {project.title}
             </p>
-            {project.description && (
-              <p className="text-[15px] leading-[1.65] text-[#ADA9A1] m-0 mb-3.5">
-                {project.description}
-              </p>
+            {project.problem && project.solution ? (
+              <div className="grid gap-3 mb-3.5">
+                <p className="text-[15px] leading-[1.65] text-[#ADA9A1] m-0">
+                  <span className="font-mono text-[11px] tracking-[.1em] uppercase text-[#807C74] mr-1.5">
+                    Problem
+                  </span>
+                  {project.problem}
+                </p>
+                <p className="text-[15px] leading-[1.65] text-[#F2EFE9] m-0">
+                  <span className="font-mono text-[11px] tracking-[.1em] uppercase text-[#FF4D19] mr-1.5">
+                    Solution
+                  </span>
+                  {project.solution}
+                </p>
+              </div>
+            ) : (
+              project.description && (
+                <p className="text-[15px] leading-[1.65] text-[#ADA9A1] m-0 mb-3.5">
+                  {project.description}
+                </p>
+              )
             )}
             <p className="font-mono text-[11px] text-[#F2EFE9] m-0 mb-4 tracking-[.04em]">
               {project.technologies.join(" · ")}

@@ -11,9 +11,10 @@ export default function About() {
           About
         </p>
         <p className="font-['Instrument_Serif'] text-3xl md:text-[44px] leading-[1.1] tracking-[-.01em] m-0">
-          Hi there, I&apos;m a software engineer mainly focused on mobile
-          development, especially native{" "}
-          <span className="italic text-[#FF4D19]">iOS</span> apps.
+          Hi there, I&apos;m a senior software engineer who finds the
+          problem first, then ships the{" "}
+          <span className="italic text-[#FF4D19]">right</span> solution —
+          native iOS to modern web.
         </p>
       </div>
 

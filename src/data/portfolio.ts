@@ -1,11 +1,11 @@
 export const about = {
   name: "Windy Windy",
-  title: "Mid iOS Engineer",
+  title: "Senior Software Engineer",
   email: "windywu812@gmail.com",
   linkedin: "https://www.linkedin.com/in/windy-windy",
   phone: "+62 896 4752 7757",
   location: "Indonesia",
-  bio: "Hi there👋, I am a software engineer working mostly about mobile development especially on iOS native app. I am curious person who love to solve real problems and love to deep dive how things can works",
+  bio: "Hi there👋, I am a senior software engineer who ships across iOS, web, and backend — turning ambiguous problems into products that ship. I am curious person who love to solve real problems and love to deep dive how things can works",
   education: [
     {
       degree: "Bachelor of Information System",
@@ -135,6 +135,10 @@ export const projects = [
     title: "Azyanna",
     category: "mobile",
     link: "https://apps.apple.com/sa/app/azyanna-buy-sell-fashion/id6654900680",
+    problem:
+      "A fashion resale startup in Saudi Arabia needed a native buy/sell marketplace fast, with real payments and delivery, before their funding runway closed.",
+    solution:
+      "Built the app solo end-to-end in SwiftUI + SwiftData (MVVM), wired to a Spring Boot backend, shipping content discovery, payments, and delivery API integration in one release cycle.",
     description:
       "E-Commerce app focusing on branded items in Saudi Arabia. Created using SwiftUI, SwiftData, MVVM with backend integration using Spring Boot.",
     technologies: [
@@ -155,6 +159,10 @@ export const projects = [
     title: "Swipe Photo",
     category: "mobile",
     link: "https://apps.apple.com/us/app/swipe-photo/id6477829631",
+    problem:
+      "Users wanted a faster, more tactile way to declutter thousands of camera-roll photos than the stock Photos app allowed.",
+    solution:
+      "Designed a gesture-first swipe interface with custom image caching and SwiftData for offline-first persistence, making bulk cleanup feel instant even on large libraries.",
     description:
       "Photo management app with gesture-based UI, image caching, and SwiftData integration for offline persistence.",
     technologies: [
@@ -174,6 +182,10 @@ export const projects = [
     title: "Air Traffic Control Tools",
     category: "mobile",
     link: "https://apps.apple.com/us/app/air-traffic-control-tools/id6476047950",
+    problem:
+      "FAA controllers and NATCA members needed fast, offline-reliable access to the full slate contract and FAA Order 7110.65, plus a way to turn calendar screenshots into real events without manual re-entry.",
+    solution:
+      "Shipped a reference app with iCloud-synced bookmarks and an OCR pipeline (VisioKit) that converts screenshots directly into iOS calendar events, saving controllers manual data entry.",
     description:
       "ATC Tools is a reference app designed for FAA controllers and NATCA members. It provides access to the full NATCA slate contract and FAA Order 7110.65, along with features like OCR for converting calendar screenshots to iOS events, iCloud sync for bookmarks, and productivity tools to manage ATC resources efficiently.",
     technologies: [
@@ -252,6 +264,10 @@ export const projects = [
     title: "KartuKu",
     category: "website",
     link: "https://kartuku.tw/home",
+    problem:
+      "Indonesian migrant workers in Taiwan lacked an easy, trustworthy way to buy digital products (credit, data, vouchers) in their own currency and language.",
+    solution:
+      "Built the platform's frontend in React, TypeScript, and Tailwind on a Go backend, focused on a fast, low-friction checkout for a mobile-first, non-native-speaker audience.",
     description:
       "E-Commerce platform for digital products in Taiwan for Indonesia's workers",
     technologies: ["React.js", "TypeScript", "Tailwind CSS", "GoLang"],

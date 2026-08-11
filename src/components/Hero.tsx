@@ -39,21 +39,22 @@ export default function Hero() {
       <div className="grid md:grid-cols-[1fr_420px] items-end border-t border-[rgba(242,239,233,.13)]">
         <div className="px-6 md:px-11 pt-14 md:pt-19 pb-12 md:pb-15 min-w-0">
           <p className="font-mono text-xs tracking-[.18em] uppercase text-[#FF4D19] mb-6 md:mb-9">
-            iOS engineer · 5+ years
+            Senior software engineer · 5+ years
           </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-black leading-[1.06] tracking-[-.04em] mb-6 md:mb-8">
-            Scalable,
+            Find the problem,
             <br />
-            <span className="whitespace-nowrap">high-performance</span>
-            <br />
+            <span className="whitespace-nowrap">ship the</span>{" "}
             <span className="font-['Instrument_Serif'] italic font-normal tracking-[-.02em] text-[#FF4D19]">
-              iOS
-            </span>{" "}
-            applications.
+              right
+            </span>
+            <br />
+            solution.
           </h1>
           <p className="text-lg md:text-xl leading-[1.55] text-[#ADA9A1] max-w-[40ch] mb-6 md:mb-8">
-            SwiftUI &amp; UIKit expert. Freelance iOS developer building for
-            clients worldwide, from Batam, Indonesia.
+            Senior software engineer working across mobile and web —
+            iOS, React, and the backend in between. For clients worldwide,
+            from Batam, Indonesia.
           </p>
           <div className="flex gap-3 flex-wrap">
             <a

@@ -12,7 +12,7 @@ export default function Experience() {
       id="experience"
       className="grid md:grid-cols-[220px_1fr] gap-0 px-6 md:px-11 py-16 md:py-18 border-t border-[rgba(242,239,233,.13)]"
     >
-      <div>
+      <div className="md:sticky md:top-24 md:self-start">
         <p className="font-mono text-xs tracking-[.18em] uppercase text-[#807C74] mb-3.5">
           Experience
         </p>
