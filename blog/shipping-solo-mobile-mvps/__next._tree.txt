@@ -1,0 +1,3 @@
+:HL["/_next/static/chunks/1tlweg2zpxyoh.css","style"]
+:HL["https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Archivo:wght@400;500;600;800;900&family=Space+Mono:wght@400;700&display=swap","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"blog","param":null,"prefetchHints":4192,"slots":{"children":{"name":"slug","param":{"type":"d","key":"shipping-solo-mobile-mvps","siblings":[]},"prefetchHints":4192,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}}}}}},"staleTime":300,"buildId":"F2direSuIJg1hLyEdLWxG"}
