@@ -50,10 +50,21 @@ export const about = {
 
 export const experiences = [
   {
+    title: "Software Engineer",
+    craft: "Web and Mobile",
+    company: "Synergy Financial Advisers Ltd",
+    location: "Singapore | Remote",
+    period: "Dec 2025 - Present",
+    description: [
+      "Migrating legacy React Native app to Expo",
+      "Building with Next.js and Tailwind CSS",
+    ],
+  },
+  {
     title: "Frontend Developer",
     company: "Slingshot Brand Architect",
     location: "Remote",
-    period: "Feb 2025 - Present",
+    period: "Feb 2025 - Dec 2025",
     description: [
       "Built and maintained responsive web apps using React, Next.js, TypeScript, Tailwind CSS",
       "Collaborated with backend teams to integrate RESTful APIs and ensure smooth data flow",
@@ -72,24 +83,16 @@ export const experiences = [
     ],
   },
   {
-    title: "iOS Engineer",
+    title: "Senior iOS Engineer",
     company: "Vidio Dot Com",
     location: "Indonesia | Remote",
-    period: "Jan 2023 - Jul 2025",
+    period: "Feb 2022 - Jul 2025",
     description: [
       "Collaborated with cross-functional teams to build iOS features such as SharePlay, WidgetKit, Live Activity, and Short feature",
       "Refactored complex flows into simpler architectures, improving productivity and maintainability",
       "Maintained Kotlin Multiplatform modules for shared code across iOS, Android, and Web",
       "Built Swift Macros to automate boilerplate, improving developer productivity by 50%",
       "Improved app launch time by ~50% using Mergeable libs and performance profiling",
-    ],
-  },
-  {
-    title: "iOS Engineer Intern",
-    company: "Vidio Dot Com",
-    location: "Indonesia | Remote",
-    period: "Feb 2022 - Dec 2022",
-    description: [
       "Developed design system from scratch to keep app's design consistency and improve team's productivity",
       "Created design system's documentation using DocC (Documentation Catalog)",
     ],
@@ -293,6 +296,13 @@ export const projects = [
     link: "https://fortiscircle.id/",
     technologies: ["React.js", "TypeScript", "Tailwind CSS"],
     period: "Jun 2025 - Jul 2025",
+  },
+  {
+    title: "SKC Tour Batam",
+    category: "website",
+    link: "https://www.skctourbatam.com/",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    period: "Jul 2026 - Aug 2026",
   },
 ];
 

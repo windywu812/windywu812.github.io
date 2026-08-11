@@ -1,10 +1,14 @@
+"use client";
+
 import { useState } from "react";
 import { projects } from "../data/portfolio";
+import { useRevealed } from "../hooks/useRevealed";
 
 type Category = "all" | "mobile" | "website";
 
 export default function Projects() {
   const [filter, setFilter] = useState<Category>("all");
+  const { ref, revealed } = useRevealed<HTMLDivElement>();
 
   const counts = {
     all: projects.length,
@@ -26,7 +30,12 @@ export default function Projects() {
       id="work"
       className="px-6 md:px-11 pt-16 md:pt-16 pb-6 border-t border-[rgba(242,239,233,.13)]"
     >
-      <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-8 mb-6.5">
+      <div
+        ref={ref}
+        className={`reveal ${
+          revealed ? "is-revealed" : ""
+        } flex flex-col md:flex-row md:justify-between md:items-end gap-8 mb-6.5`}
+      >
         <div>
           <p className="font-mono text-xs tracking-[.18em] uppercase text-[#807C74] mb-3.5">
             Selected work
@@ -46,7 +55,7 @@ export default function Projects() {
               onClick={() => setFilter(tab.key)}
               className={`font-mono text-xs tracking-[.08em] uppercase px-4.5 py-2.5 border cursor-pointer transition-colors ${
                 filter === tab.key
-                  ? "bg-[#FF4D19] text-[#08080A] border-[#FF4D19] font-bold"
+                  ? "bg-[#4F46E5] text-[#08080A] border-[#4F46E5] font-bold"
                   : "bg-transparent text-[#F2EFE9] border-[rgba(242,239,233,.28)]"
               }`}
             >
@@ -57,27 +66,28 @@ export default function Projects() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[rgba(242,239,233,.13)] border-y border-[rgba(242,239,233,.13)]">
-        {visible.map((project, i) => (
+      <div className="columns-1 md:columns-2 gap-6">
+        {visible.map((project) => (
           <a
-            key={i}
+            key={project.title}
             href={project.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#08080A] p-7 md:p-8 block hover:bg-[#0f0f11] transition-colors"
+            className="group block break-inside-avoid mb-6 border border-[rgba(242,239,233,.13)] p-7 md:p-8 hover:bg-[#0f0f11] hover:border-[rgba(242,239,233,.28)] transition-colors"
           >
             <div className="flex justify-between items-center mb-4.5">
-              <span className="font-mono text-[11px] tracking-[.1em] uppercase text-[#FF4D19]">
-                {project.category === "mobile" ? "iOS" : "Web"} ·{" "}
-                {String(i + 1).padStart(2, "0")}
+              <span className="font-mono text-[11px] tracking-[.1em] uppercase text-[#4F46E5]">
+                {project.category === "mobile" ? "iOS" : "Web"}
               </span>
               <span className="font-mono text-[11px] text-[#807C74]">
                 {project.period}
               </span>
             </div>
-            <p className="text-2xl md:text-[34px] font-black tracking-[-.03em] m-0 mt-5 mb-2.5">
+
+            <p className="text-2xl md:text-[34px] font-black tracking-[-.03em] leading-[1.05] m-0 mb-3">
               {project.title}
             </p>
+
             {project.problem && project.solution ? (
               <div className="grid gap-3 mb-3.5">
                 <p className="text-[15px] leading-[1.65] text-[#ADA9A1] m-0">
@@ -87,7 +97,7 @@ export default function Projects() {
                   {project.problem}
                 </p>
                 <p className="text-[15px] leading-[1.65] text-[#F2EFE9] m-0">
-                  <span className="font-mono text-[11px] tracking-[.1em] uppercase text-[#FF4D19] mr-1.5">
+                  <span className="font-mono text-[11px] tracking-[.1em] uppercase text-[#4F46E5] mr-1.5">
                     Solution
                   </span>
                   {project.solution}
@@ -100,11 +110,15 @@ export default function Projects() {
                 </p>
               )
             )}
+
             <p className="font-mono text-[11px] text-[#F2EFE9] m-0 mb-4 tracking-[.04em]">
               {project.technologies.join(" · ")}
             </p>
-            <span className="font-mono text-xs tracking-[.08em] uppercase text-[#FF4D19]">
-              View project ↗
+            <span className="font-mono text-xs tracking-[.08em] uppercase text-[#4F46E5] inline-flex items-center gap-1.5">
+              View project
+              <span className="transition-transform group-hover:translate-x-0.5">
+                ↗
+              </span>
             </span>
           </a>
         ))}

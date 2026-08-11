@@ -1,3 +1,4 @@
+import Image from "next/image";
 import pic from "../assets/portrait.png";
 
 const stack = [
@@ -17,7 +18,7 @@ function Ticker() {
       {stack.map((s) => (
         <span key={s} className="flex gap-7 items-center">
           <span>{s}</span>
-          <span className="text-[#FF4D19]">◆</span>
+          <span className="text-[#4F46E5]">◆</span>
         </span>
       ))}
     </span>
@@ -38,14 +39,14 @@ export default function Hero() {
     <section className="font-[Archivo]">
       <div className="grid md:grid-cols-[1fr_420px] items-end border-t border-[rgba(242,239,233,.13)]">
         <div className="px-6 md:px-11 pt-14 md:pt-19 pb-12 md:pb-15 min-w-0">
-          <p className="font-mono text-xs tracking-[.18em] uppercase text-[#FF4D19] mb-6 md:mb-9">
-            Senior software engineer · 5+ years
+          <p className="font-mono text-xs tracking-[.18em] uppercase text-[#4F46E5] mb-6 md:mb-9">
+            Senior software engineer · 6+ years
           </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-black leading-[1.06] tracking-[-.04em] mb-6 md:mb-8">
             Find the problem,
             <br />
             <span className="whitespace-nowrap">ship the</span>{" "}
-            <span className="font-['Instrument_Serif'] italic font-normal tracking-[-.02em] text-[#FF4D19]">
+            <span className="font-['Instrument_Serif'] italic font-normal tracking-[-.02em] text-[#4F46E5]">
               right
             </span>
             <br />
@@ -59,7 +60,7 @@ export default function Hero() {
           <div className="flex gap-3 flex-wrap">
             <a
               href="mailto:windywu812@gmail.com"
-              className="font-mono text-xs tracking-[.08em] uppercase px-7 py-4 bg-[#FF4D19] text-[#08080A] font-bold"
+              className="font-mono text-xs tracking-[.08em] uppercase px-7 py-4 bg-[#4F46E5] text-[#08080A] font-bold"
             >
               Start a project
             </a>
@@ -75,10 +76,13 @@ export default function Hero() {
         </div>
 
         <div className="relative min-w-0 w-full md:w-[420px] h-[420px] md:h-[660px]">
-          <img
+          <Image
             src={pic}
             alt="Windy"
-            className="w-full h-full object-cover block grayscale contrast-[1.08] brightness-95"
+            fill
+            priority
+            sizes="(min-width: 768px) 420px, 100vw"
+            className="object-cover grayscale contrast-[1.08] brightness-95"
             style={{ objectPosition: "50% 18%" }}
           />
           <div className="absolute left-4 md:-left-[70px] bottom-11 bg-[#F2EFE9] text-[#08080A] px-[18px] py-[14px] max-w-[240px]">
@@ -86,7 +90,7 @@ export default function Hero() {
               Currently
             </p>
             <p className="text-[15px] leading-[1.4] font-semibold m-0">
-              Frontend Developer at Slingshot Brand Architect, remote
+              Software Engineer at Synergy Financial Advisers, remote
             </p>
           </div>
         </div>
