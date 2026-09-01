@@ -56,8 +56,11 @@ export const experiences = [
     location: "Singapore | Remote",
     period: "Dec 2025 - Present",
     description: [
-      "Migrating legacy React Native app to Expo",
-      "Building with Next.js and Tailwind CSS",
+      "Migrated legacy React Native app to Expo, modernizing build tooling and dependency management",
+      "Upgraded to Next.js 16, improving build performance and unlocking newer framework capabilities",
+      "Refactored fragile module architecture into cleaner, more maintainable, testable structure",
+      "Improved UI rendering performance across key views",
+      "Designed and implemented CI/CD pipeline for both React Native and web codebases, adding automated testing and replacing manual build/release steps with automated workflows",
     ],
   },
   {
@@ -75,7 +78,7 @@ export const experiences = [
     title: "iOS Developer",
     company: "Upwork",
     location: "Remote",
-    period: "Jan 2023 - Present",
+    period: "Jan 2023 - Dec 2025",
     description: [
       "Upwork Top Talent with 6+ proven happy clients",
       "Delivered high-quality native iOS apps for diverse clients",
@@ -206,6 +209,47 @@ export const projects = [
     ],
   },
   {
+    title: "KartuKu",
+    category: "website",
+    link: "https://kartuku.tw/home",
+    problem:
+      "Indonesian migrant workers in Taiwan lacked an easy, trustworthy way to buy digital products (credit, data, vouchers) in their own currency and language.",
+    solution:
+      "Built the platform's frontend in React, TypeScript, and Tailwind on a Go backend, focused on a fast, low-friction checkout for a mobile-first, non-native-speaker audience.",
+    description:
+      "E-Commerce platform for digital products in Taiwan for Indonesia's workers",
+    technologies: ["React.js", "TypeScript", "Tailwind CSS", "GoLang"],
+    period: "Sep 2025 - Oct 2025",
+  },
+  {
+    title: "NoLimitClass",
+    category: "website",
+    link: "https://www.nolimitclass.com/",
+    technologies: ["React.js", "TypeScript", "Tailwind CSS"],
+    period: "May 2025 - May 2025",
+  },
+  {
+    title: "Decorient",
+    category: "website",
+    link: "https://decorient.com/",
+    technologies: ["React.js", "TypeScript", "Tailwind CSS"],
+    period: "Aug 2025 - Aug 2025",
+  },
+  {
+    title: "Fortis",
+    category: "website",
+    link: "https://fortiscircle.id/",
+    technologies: ["React.js", "TypeScript", "Tailwind CSS"],
+    period: "Jun 2025 - Jul 2025",
+  },
+  {
+    title: "SKC Tour Batam",
+    category: "website",
+    link: "https://www.skctourbatam.com/",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
+    period: "Jul 2026 - Aug 2026",
+  },
+  {
     title: "Kink Mobile",
     category: "mobile",
     link: "https://github.com/windywu812/Kink",
@@ -262,47 +306,6 @@ export const projects = [
       "HealthKit integration for tracking step data",
       "CoreData for offline persistence",
     ],
-  },
-  {
-    title: "KartuKu",
-    category: "website",
-    link: "https://kartuku.tw/home",
-    problem:
-      "Indonesian migrant workers in Taiwan lacked an easy, trustworthy way to buy digital products (credit, data, vouchers) in their own currency and language.",
-    solution:
-      "Built the platform's frontend in React, TypeScript, and Tailwind on a Go backend, focused on a fast, low-friction checkout for a mobile-first, non-native-speaker audience.",
-    description:
-      "E-Commerce platform for digital products in Taiwan for Indonesia's workers",
-    technologies: ["React.js", "TypeScript", "Tailwind CSS", "GoLang"],
-    period: "Sep 2025 - Oct 2025",
-  },
-  {
-    title: "NoLimitClass",
-    category: "website",
-    link: "https://www.nolimitclass.com/",
-    technologies: ["React.js", "TypeScript", "Tailwind CSS"],
-    period: "May 2025 - May 2025",
-  },
-  {
-    title: "Decorient",
-    category: "website",
-    link: "https://decorient.com/",
-    technologies: ["React.js", "TypeScript", "Tailwind CSS"],
-    period: "Aug 2025 - Aug 2025",
-  },
-  {
-    title: "Fortis",
-    category: "website",
-    link: "https://fortiscircle.id/",
-    technologies: ["React.js", "TypeScript", "Tailwind CSS"],
-    period: "Jun 2025 - Jul 2025",
-  },
-  {
-    title: "SKC Tour Batam",
-    category: "website",
-    link: "https://www.skctourbatam.com/",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-    period: "Jul 2026 - Aug 2026",
   },
 ];
 
